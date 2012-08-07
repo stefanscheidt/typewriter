@@ -2,12 +2,20 @@
 <html>
 <head>
     <title>typewriter - practice your keyboard skills</title>
+
+    <script src="./lib/jquery-1.7.2.js"></script>
+    <script src="./lib/angular.js"></script>
+
+    <script src="./services.js"></script>
+    <script src="./controller.js"></script>
+    <script src="./application.js"></script>
+
     <link href="./typewriter.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<div id="typewriter">
+<div id="typewriter" ng-app="typewriter" ng-controller="typewriterController">
 
-    <div id="currentChar">A</div>
+    <div id="currentChar">{{challenge.char}}</div>
 
     <div id="statusbar">
         <table id="statusbar_table" class="status">
@@ -16,6 +24,12 @@
                 <th class="caption rate">Hit-Rate</th>
                 <th class="caption count">Overall Count</th>
                 <th class="caption time">Average Time</th>
+            </tr>
+            <tr ng-repeat="char in characters">
+                <td class="char">{{char}}</td>
+                <td class="rate">{{statistics(char).hitRate()}}</td>
+                <td class="count">{{statistics(char).overallCount}}</td>
+                <td class="time">{{statistics(char).averageTime()}}</td>
             </tr>
         </table>
     </div>
