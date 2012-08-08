@@ -6,7 +6,7 @@ angular.module('tw.directives', [])
                 var expr = $parse(attrs['twDocumentKeydown']);
                 $rootElement.keydown(function (event) {
                     scope.$apply(function(scope) {
-                        expr(scope, {key:String.fromCharCode(event.which)});
+                        expr(scope, {event:event});
                     });
                 });
             }

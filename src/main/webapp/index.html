@@ -10,7 +10,7 @@
     <link href="./typewriter.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<div id="typewriter" ng-controller="TwController" tw-document-keydown="currentChar = key" ng-cloak>
+<div id="typewriter" ng-controller="TwController" tw-document-keydown="handleKeydown(event)" ng-cloak>
 
     <div id="currentChar">{{currentChar}}</div>
 
