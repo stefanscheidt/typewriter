@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tw">
 <head>
     <title>typewriter - practice your keyboard skills</title>
     <link href="./typewriter.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<div id="typewriter">
+<div id="typewriter" ng-controller="TwController" tw-keydown="processKey">
 
     <div id="currentChar">A</div>
 
@@ -27,5 +27,12 @@
     </div>
 
 </div>
+
+<script src="lib/jquery.js"></script>
+<script src="lib/angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers.js"></script>
+<script src="app/directives.js"></script>
+
 </body>
 </html>
