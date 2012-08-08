@@ -1,6 +1,9 @@
 function TwController($scope) {
-    $scope.processKey = function (key) {
+    $scope.currentChar = 'A';
+    $scope.processKeydown = function (event) {
+        var key = String.fromCharCode(event.which);
         console.log('processKey: ' + key);
+        $scope.currentChar = key;
     }
 }
 TwController.$inject = ['$scope'];

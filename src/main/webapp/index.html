@@ -5,9 +5,9 @@
     <link href="./typewriter.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<div id="typewriter" ng-controller="TwController" tw-keydown="processKey">
+<div id="typewriter" ng-controller="TwController" tw-document-keydown="processKeydown">
 
-    <div id="currentChar">A</div>
+    <div id="currentChar">{{currentChar}}</div>
 
     <div id="statusbar">
         <table id="statusbar_table" class="status">
