@@ -14,7 +14,7 @@ function TwServiceFactory() {
     }
 
     function _randomChar(characters) {
-        return characters.charAt(Math.floor(Math.random() * characters.length));
+        return characters[Math.floor(Math.random() * characters.length)];
     }
 
     function evaluateKey(key, challenge, statistic) {

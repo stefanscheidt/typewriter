@@ -44,22 +44,26 @@ table.status {
 }
 
 .char {
+    font-size: 10pt;
     width: 20pt;
     text-align: center;
     font-weight: bold;
 }
 
 .rate {
+    font-size: 10pt;
     width: 100pt;
     text-align: right;
 }
 
 .count {
+    font-size: 10pt;
     width: 100pt;
     text-align: right;
 }
 
 .time {
+    font-size: 10pt;
     width: 100pt;
     text-align: right;
 }

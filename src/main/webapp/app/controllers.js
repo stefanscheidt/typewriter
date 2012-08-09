@@ -1,5 +1,5 @@
 function TwController($scope, twService) {
-    $scope.characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $scope.characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");
     $scope.cssClass = '';
     $scope._statistics = {};
     $scope.challenge = twService.nextChallenge($scope.characters);
