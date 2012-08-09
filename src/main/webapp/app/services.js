@@ -15,7 +15,7 @@ function TwServiceFactory() {
         return characters.charAt(Math.floor(Math.random() * characters.length));
     }
 
-    function evaluateKeypress(key, challenge, statistic) {
+    function evaluateKey(key, challenge, statistic) {
         var correctStroke = (key == challenge.char);
         if (correctStroke) {
             statistic.correctKeystroke(100);
@@ -28,7 +28,7 @@ function TwServiceFactory() {
     return {
         nextChallenge: nextChallenge,
         initStatistic: initStatistic,
-        evaluateKeypress: evaluateKeypress
+        evaluateKey: evaluateKey
     }
 }
 

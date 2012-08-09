@@ -15,7 +15,7 @@
 <body>
 <div id="typewriter" ng-controller="TwController" tw-document-keydown="handleKeydown(event)" ng-cloak>
 
-    <div id="currentChar">{{challenge.char}}</div>
+    <div id="currentChar" class="{{cssClass}}">{{challenge.char}}</div>
 
     <div id="statusbar">
         <table id="statusbar_table" class="status">
