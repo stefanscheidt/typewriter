@@ -4,29 +4,38 @@
     <title>typewriter - practice your keyboard skills</title>
     <script src="lib/jquery.js"></script>
     <script src="lib/angular.js"></script>
+
     <script src="app/app.js"></script>
+    <script src="app/services.js"></script>
     <script src="app/controllers.js"></script>
     <script src="app/directives.js"></script>
+
     <link href="./typewriter.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div id="typewriter" ng-controller="TwController" tw-document-keydown="handleKeydown(event)" ng-cloak>
 
-    <div id="currentChar">{{currentChar}}</div>
+    <div id="currentChar" class="{{cssClass}}">{{challenge.char}}</div>
 
     <div id="statusbar">
         <table id="statusbar_table" class="status">
             <tr>
                 <th class="caption">Char</th>
-                <th class="caption rate">Hit-Rate</th>
+                <th class="caption rate">Hit-Rate (%)</th>
                 <th class="caption count">Overall Count</th>
-                <th class="caption time">Average Time</th>
+                <th class="caption time">Average Time (ms)</th>
+            </tr>
+            <tr ng-repeat="char in characters">
+                <td class="char">{{char}}</td>
+                <td class="rate">{{statistics(char).hitRate()}}</td>
+                <td class="count">{{statistics(char).overallCount}}</td>
+                <td class="time">{{statistics(char).averageTime()}}</td>
             </tr>
         </table>
     </div>
 
     <div id="description">
-        Typewrite is a tiny little programm written in JavaScript, that shows you some random characters and
+        Typewrite is a tiny little program written in JavaScript, that shows you some random characters and
         waits for you hitting the appropriate key on your keyboard. It tracks the number of correct and wrong
         keystrokes you make and the time you needed. It computes your hit-Rate and your average time per character.
     </div>

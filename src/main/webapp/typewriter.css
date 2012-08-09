@@ -1,6 +1,6 @@
 div#typewriter {
     position: absolute;
-    width: 600pt;
+    width: 620pt;
     text-align: center;
 }
 
@@ -11,7 +11,7 @@ div#currentChar {
     width: 300pt;
     height: 300pt;
 
-    font-size: 96pt;
+    font-size: 280pt;
     text-align: center;
     vertical-align: middle;
 }
@@ -20,7 +20,7 @@ div#statusbar {
     position: absolute;
     top: 0pt;
     right: 0pt;
-    width: 295pt;
+    width: 320pt;
 }
 
 div#description {
@@ -44,22 +44,26 @@ table.status {
 }
 
 .char {
+    font-size: 10pt;
     width: 20pt;
     text-align: center;
     font-weight: bold;
 }
 
 .rate {
-    width: 50pt;
+    font-size: 10pt;
+    width: 100pt;
     text-align: right;
 }
 
 .count {
+    font-size: 10pt;
     width: 100pt;
     text-align: right;
 }
 
 .time {
+    font-size: 10pt;
     width: 100pt;
     text-align: right;
 }
