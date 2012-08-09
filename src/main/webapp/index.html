@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tw">
 <head>
     <title>typewriter - practice your keyboard skills</title>
-
-    <script src="./lib/jquery-1.7.2.js"></script>
-    <script src="./lib/angular.js"></script>
-
-    <script src="./services.js"></script>
-    <script src="./controller.js"></script>
-    <script src="./application.js"></script>
-
+    <script src="lib/jquery.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
+    <script src="app/directives.js"></script>
     <link href="./typewriter.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<div id="typewriter" ng-app="typewriter" ng-controller="typewriterController">
+<div id="typewriter" ng-controller="TwController" tw-document-keydown="handleKeydown(event)" ng-cloak>
 
     <div id="currentChar">{{challenge.char}}</div>
 

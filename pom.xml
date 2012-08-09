@@ -38,6 +38,7 @@
                     </connectors>
                     <webAppConfig>
                         <contextPath>${jetty.contextPath}</contextPath>
+                        <defaultsDescriptor>${basedir}/misc/jetty-webapp/webdefault.xml</defaultsDescriptor>
                         <resourceBases>
                             <resourceBase>${basedir}/src/main/webapp</resourceBase>
                             <resourceBase>${basedir}/src/test/webapp</resourceBase>
