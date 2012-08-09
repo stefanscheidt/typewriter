@@ -6,7 +6,9 @@ function TwServiceFactory() {
 
     function nextChallenge(characters) {
         var challenge = {
-            char: _randomChar(characters)
+            char:   _randomChar(characters),
+            start:  new Date().getTime(),
+            end:    null
         }
         return challenge;
     }
@@ -16,11 +18,13 @@ function TwServiceFactory() {
     }
 
     function evaluateKey(key, challenge, statistic) {
+        challenge.end = new Date().getTime();
         var correctStroke = (key == challenge.char);
+        var millis = challenge.end - challenge.start;
         if (correctStroke) {
-            statistic.correctKeystroke(100);
+            statistic.correctKeystroke(millis);
         } else {
-            statistic.wrongKeystroke(100);
+            statistic.wrongKeystroke(millis);
         }
         return correctStroke;
     }
@@ -31,6 +35,7 @@ function TwServiceFactory() {
         evaluateKey: evaluateKey
     }
 }
+
 
 
 function Statistic(char) {
