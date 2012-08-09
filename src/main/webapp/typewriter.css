@@ -1,6 +1,6 @@
 div#typewriter {
     position: absolute;
-    width: 600pt;
+    width: 620pt;
     text-align: center;
 }
 
@@ -20,7 +20,7 @@ div#statusbar {
     position: absolute;
     top: 0pt;
     right: 0pt;
-    width: 295pt;
+    width: 320pt;
 }
 
 div#description {
@@ -50,7 +50,7 @@ table.status {
 }
 
 .rate {
-    width: 50pt;
+    width: 100pt;
     text-align: right;
 }
 

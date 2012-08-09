@@ -78,7 +78,7 @@ Statistic.prototype.hitRate = function() {
 Statistic.prototype.averageTime = function() {
     if (this.overallCount == 0)
         return 0;
-    return this.overallTime / this.overallCount;
+    return Math.round(this.overallTime / this.overallCount);
 };
 
 
