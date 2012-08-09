@@ -1,1 +1,1 @@
-angular.module('tw', ['tw.directives']);
+angular.module('tw', ['tw.controllers', 'tw.services', 'tw.directives']);

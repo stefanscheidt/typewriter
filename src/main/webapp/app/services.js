@@ -1,4 +1,4 @@
-function TypewriterServiceFactory() {
+function TwServiceFactory() {
 
     function initStatistic(char) {
         return new Statistic(char);
@@ -78,9 +78,8 @@ Statistic.prototype.averageTime = function() {
 
 
 
-var module = angular.module('typewriterServices', []);
-
-module.factory('typewriterService', TypewriterServiceFactory);
+var module = angular.module('tw.services', []);
+module.factory('twService', TwServiceFactory);
 
 
 
